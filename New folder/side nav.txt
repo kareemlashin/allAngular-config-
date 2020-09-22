@@ -1,0 +1,3 @@
+ng generate @angular/material:material-nav --name=root-nav
+
+ng add ngx-owl-carousel-o
