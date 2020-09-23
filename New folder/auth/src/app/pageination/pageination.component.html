@@ -1,0 +1,23 @@
+<p>pageination works!</p>
+<div class="page">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<div>
+    npm install ngx-infinite-scroll --save
+
+</div>
+<div #height id="scroll" style="height: '300px'; overflow-y: scroll;" class="search-results" [scrollWindow]="false" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="5" [infiniteScrollThrottle]="300" infiniteScroll (mousewheel)="onMousewheel($event)">
+    <div id="all">
+
+        <div *ngFor="let item of data1">
+            <div>
+                {{item.id}} {{item.name}} 1
+
+            </div>
+        </div>
+    </div>
+</div>

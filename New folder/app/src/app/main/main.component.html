@@ -1,0 +1,89 @@
+{{magg}}
+<div #height id="scroll" style="height: '300px'; overflow-y: scroll;" class="search-results" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="5" [infiniteScrollThrottle]="300" infiniteScroll (mousewheel)="onMousewheel($event)">
+    <div id="all">
+
+        <div *ngFor="let item of data1">
+            <div>
+                {{item.id}} {{item.name}} 1
+
+            </div>
+        </div>
+    </div>
+</div>
+<div>Some tags before</div>
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>Slide 1</ng-template>
+    <ng-template carouselSlide>Slide 2</ng-template>
+    <ng-template carouselSlide>Slide 3</ng-template>
+    <ng-template carouselSlide>Slide 3</ng-template>
+    <ng-template carouselSlide>Slide 3</ng-template>
+</owl-carousel-o>
+<div>Some tags after</div>
+<div class="m-2">
+
+    <p>main works!</p>
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out! <i class="fab fa-500px"></i> <i class="fab fa-500px"></i>
+        <i class="fab fa-500px"></i>
+        <i class="fab fa-500px"></i>
+        <i class="fab fa-500px"></i>
+    </div>
+    <div uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <h3>Notice</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <p>
+        <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+    </p>
+
+    <p>
+        <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+    </p>
+
+    <p>
+        Button with a badge on the left
+        <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Action
+  </button>
+    </p>
+
+    <p>
+        Button toggles badge visibility
+        <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+        Hide
+    </button>
+    </p>
+
+
+    Icon with a badge
+    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    <!-- Include text description of the icon's meaning for screen-readers -->
+    <span class="cdk-visually-hidden">
+      Example with a home icon with overlaid badge showing the number 15
+    </span>
+
+
+
+    <div class="alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+    </div>
+    <div class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div>
+    <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+    </div>
+    <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    <div class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+    <div class="alert alert-light" role="alert">
+        A simple light alert—check it out!
+    </div>
+    <div class="alert alert-dark" role="alert">
+        A simple dark alert—check it out!
+    </div>
+</div>

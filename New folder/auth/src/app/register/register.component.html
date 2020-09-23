@@ -1,0 +1,62 @@
+<p>register works!</p>
+<p>login works!</p>
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div>
+        f_name
+    </div>
+    <div>
+        <input type="text" formControlName="f_name">
+    </div>
+    <div *ngIf="registerForm.controls.f_name.errors !=null && registerForm.controls.f_name.touched">
+        error f_name
+    </div>
+    <div>
+        l_name
+    </div>
+    <div>
+        <input type="email" formControlName="l_name">
+    </div>
+    <div *ngIf="registerForm.controls.l_name.errors !=null && registerForm.controls.l_name.touched">
+        error l_name
+    </div>
+    <div>
+        email
+    </div>
+    <div>
+        <input type="email" formControlName="email">
+    </div>
+    <div *ngIf="registerForm.controls.email.errors !=null && registerForm.controls.email.touched">
+        error email
+    </div>
+
+
+    <div>
+        password
+    </div>
+    <div>
+        <input type="text" formControlName="password">
+
+    </div>
+    <div *ngIf="registerForm.controls.password.errors !=null && registerForm.controls.password.touched">
+        error email
+    </div>
+    <div>
+        password
+    </div>
+    <div>
+        <input type="text" formControlName="confirmPassword">
+
+    </div>
+    <div *ngIf="registerForm.controls.confirmPassword.errors !=null && registerForm.controls.confirmPassword.touched">
+        error confirmPassword
+    </div>
+
+    <div *ngIf="registerForm.controls.confirmPassword.value !== registerForm.controls.password.value && registerForm.controls.confirmPassword.touched">
+        not confirmPassword
+    </div>
+
+    <button [disabled]="!registerForm.valid && registerForm.controls.confirmPassword.value !== registerForm.controls.password.value">
+        register
+    </button>
+
+</form>
