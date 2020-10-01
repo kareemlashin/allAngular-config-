@@ -1,0 +1,17 @@
+<nav>
+    [routerLink]="['routePath', routeParameterValue]" routerLinkActive="active" <br>
+    <a [routerLink]="'/home'" routerLinkActive="CLASS" [routerLinkActiveOptions]="{exact: true}">home</a><br>
+    <a [routerLink]="'/nav'" routerLinkActive="CLASS">nav</a><br>
+    <a [routerLink]="'/cli'" routerLinkActive="CLASS">cli</a><br>
+    <a [routerLink]="'/pipe'" routerLinkActive="CLASS">pipe</a><br>
+    <a [routerLink]="'/basic'" routerLinkActive="CLASS">basic</a><br>
+    <a [routerLink]="'form'" routerLinkActive="CLASS">form</a><br>
+    <a [routerLink]="'sev'" routerLinkActive="CLASS">sev</a><br>
+    <a [routerLink]="['sev','5']">sev5</a><br>
+    <a [routerLink]="'test'">test</a><br>
+    <a [routerLink]="'home'">home</a><br>
+    <a [routerLink]="'home'">home</a><br>
+</nav>
+<a [routerLink]="['routePath']" routerLinkActive="router-link-active"></a>
+<router-outlet></router-outlet>
+<button (click)="auth()">auth</button>

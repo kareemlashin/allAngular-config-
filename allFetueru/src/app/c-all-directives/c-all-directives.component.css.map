@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "c-all-directives.component.scss"
+    ],
+    "names": [],
+    "file": "c-all-directives.component.css"
+}

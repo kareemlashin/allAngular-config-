@@ -1,0 +1,69 @@
+parent
+<p>c-all-directives works!</p>
+<h1>child</h1>
+{{x}} {{d}}
+<app-c-pass-data (nameNew)="d=$event" (toParent)="x =  $event" [itemChild]="itemParent" [dataRes]="dataSend" [x]="y" [n]="z" [master]="masterName" [person]="person"></app-c-pass-data>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input type="text" [(ngModel)]="itemParent"><br> ngIf
+<h1 *ngIf="exp;else name">one</h1>
+<ng-template #name>
+    <div>
+        name
+    </div>
+</ng-template>
+
+<h1 *ngIf="!exp">!one</h1>
+<p *ngIf="exp">exp</p>
+<p *ngIf="!exp">exp</p>
+ngFor
+<ul>
+    <li *ngFor="let item of allStudent as student;let i=index">
+        {{item?.id}}<br> {{item?.name}} {{item?.name}}
+        <br>{{i}}
+    </li>
+</ul>
+
+<div [ngSwitch]="switchExp">
+    <p *ngSwitchCase="'green'">
+        green
+    </p>
+    <p *ngSwitchCase="'red'">
+        red
+    </p>
+    <p *ngSwitchDefault>
+        not any one
+    </p>
+</div>
+<div *ngIf="exp; else elseTemplate">
+
+</div>
+<ng-template #elseTemplate>
+    <div>
+        else
+    </div>
+</ng-template>
+<div [ngStyle]="{'background-image': 'url('+img !==''? img:'' +')'}">
+
+</div>
+<div [ngClass]="{'name-class': true===true?true:false,'name2':false,'class':true}">
+
+</div>
+
+<div class="one ">
+
+</div>
+<div [style]="{'color':exp==true?'red':'blue'}"></div>
+
+<div *ngIf="exp; else elseTemplate2">
+
+</div>
+<ng-template #elseTemplate2>
+
+</ng-template>
+<div [ngClass]="{'class dssdsd': exp==true?true:false}"></div>

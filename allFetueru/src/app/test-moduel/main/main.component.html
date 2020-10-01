@@ -1,0 +1,24 @@
+<p>main works!</p>
+<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+    <div formGroupName="">
+        <input formControlName="name" type="text" formControlName="">
+        <div *ngIf="nameForm.controls.name.invalid">ffff</div>
+        <div *ngIf="nameForm.controls.name.dirty">ffff</div>
+        <div *ngIf="nameForm.controls.name.touched">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors !=null">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors.pattern">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors.minLength">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors.email">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors.maxLength">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors.pattern">ffff</div>
+        <div *ngIf="nameForm.controls.name.errors.required">ffff</div>
+        <input type="text" formControlName="">
+        <input type="text" formControlName="">
+
+    </div>
+    <input type="text" formControlName="">
+    <input type="text" formControlName="">
+    <input type="text" formControlName="">
+    <input type="text" formControlName="">
+    <button [disabled]="!nameForm.valid"></button>
+</form>

@@ -1,0 +1,129 @@
+interpolation {{interpolation}}
+<br>
+<img [src]="prop" alt="" srcset=""> <br>{{prop=='true'?'ok':'ontok'}}
+<p [style.font-size]="font">font font font font font</p>
+<p [style]="{'font-size':font}">font font font</p>
+<p [style]="{'font-size':font == '10px'?'100px':'50px'}">font font font</p>
+<p [className]="'one two three'">one two three</p>
+<p [class]="'one two three'">one two three</p>
+<p [class]="one==true?'one':'two'">one two three</p>
+<p [class]="{'one': one !=true , 'two': two != false, 'three':three}">one two three</p>
+<p *ngIf="one"> one exp</p>
+<p *ngIf="!one"> ! one exp</p>
+<div *ngIf="!one; else elseTemplate3">
+    elseTemplate3
+</div>
+<ng-template #elseTemplate3>
+    <div>
+        elseTemplate3 elseTemplate3
+    </div>
+</ng-template>
+<span [ngSwitch]="prop">
+<p *ngSwitchCase="true">
+one
+</p>
+<p *ngSwitchCase="two">
+two
+</p>
+<p *ngSwitchDefault>
+three
+</p>
+</span>
+
+<br>{{name_interpolation}} {{ x + 4 }} {{x !=4 ?5:4}}
+<img [src]="imgUrl">
+<button [disabled]="!property">okj</button>
+<button [disabled]="property">okj</button>
+<div [class.one]="one">one</div>
+<div [class]="one!=true?'one':'two'">one</div>
+<div [class]="{'one':one,'two':two}">one</div>
+<div [style.color]="style">style</div>
+<div [style]="{'color':style}">style</div>
+<div [style.color]="one!=true?style:'#f90'">style</div>
+<div [style]="{'color':one==true?'green':'#159'}">style</div>
+<div [className]="one">dddd</div>
+
+<div *ngIf="one">one</div>
+<div *ngIf="two">two</div>
+<div *ngIf="!one;else twoelse">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ea ipsam assumenda nemo consectetur eligendi velit, praesentium nostrum soluta corrupti odit unde recusandae. Consequuntur labore, deleniti quos veritatis maiores magni.
+</div>
+<ng-template #twoelse>
+    <p>
+        else
+    </p>
+</ng-template>
+<span [ngSwitch]="width">
+<p *ngSwitchCase="true">
+one
+</p>
+<p *ngSwitchCase="false">
+two
+</p>
+<p *ngSwitchDefault>
+ok
+</p>
+</span>
+<div [ngStyle]="{'width': width ,'background-color':'#000'}">
+    width
+</div>
+<div [ngClass]="{'one': one}">
+    one oneo onep one
+</div>
+
+<p>b-basic works!</p>
+<h1>Interpolation </h1>
+<h2>interpolation : {{name_interpolation}}</h2>
+<h3>{{3*3}}</h3>
+<h4>
+    {{3==3?3*3:4*3}} if in binding <br> ternary operator <br>{{x===4? x:7}}
+</h4>
+<h1>
+    Property Binding
+</h1>
+<button [disabled]="!one">ok</button>
+<img [src]="imgUrl" [alt]="alt" />
+<h1>
+    class binding
+</h1>
+
+<h1>
+    style binding
+</h1>
+
+property
+<img [src]="imgUrl" alt="" srcset="">
+
+
+<div [style.color]="one?'red':'blue'">
+    sddssd
+</div>
+
+<div [className]="getClass">getClass</div>
+
+
+
+
+<div [style.background-image]="'url(' + imgUrl + ')'" [style]="{height:height}">
+
+</div>
+<input type="text" [(ngModel)]="twoWayDataBinding"> {{twoWayDataBinding}}>
+
+<div [style]="{'color': one ?'red':'two','font-size':one?'20px':'16px'}">
+
+</div>
+
+
+
+<div [class]="one==true ?'one':'two'"></div>
+<div [class]="{'one':one ===true,'two':two==false }"></div>
+
+
+<div [style.color]="one==true?'red':'green'"></div>
+<div [style]="{'color':one==true?'red':'blue'}"></div>
+
+<div [class]="one==true?'red':'green'"></div>
+<div [class]="{'one':one==true?'red':'blue'}"></div>
+<div [style.background-image]="'url(' + imgUrl + ')'" [style]="{height:height}">
+
+    interpolation
