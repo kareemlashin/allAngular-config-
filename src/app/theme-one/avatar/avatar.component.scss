@@ -1,0 +1,278 @@
+// ! Badges
+.chip {
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.chip.primary {
+    background: #2F4058;
+    color: whitesmoke;
+}
+
+.chip.secondary {
+    background: #242933;
+    color: #777;
+}
+
+.chip.warning {
+    background: #FEB904;
+    color: whitesmoke;
+}
+
+.chip.danger {
+    background: #DA605B;
+    color: whitesmoke;
+}
+
+.chip.info {
+    background: #5FD6D4;
+    color: whitesmoke;
+}
+
+// ? avatar
+//  =================
+//      Imports
+//  =================
+.avatar {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+.avatar--group {
+    display: inline-flex;
+    margin-right: 15px;
+}
+
+.avatar {
+    img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .avatar-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.avatar--group {
+    .avatar-xl {
+        margin-left: -1.28125rem;
+    }
+    .avatar {
+        margin-left: -.75rem;
+    }
+}
+
+.avatar-xl {
+    width: 5.125rem;
+    height: 5.125rem;
+    font-size: 1.70833rem;
+}
+
+.avatar-lg {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.33333rem;
+}
+
+.avatar-sm {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: .83333rem;
+}
+
+
+/*
+	Indicators
+*/
+
+.avatar-indicators:before {
+    content: "";
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    width: 28%;
+    height: 28%;
+    border-radius: 50%;
+    border: 3px solid rgba(191, 201, 212, 0.611764705882353);
+    background-color: red;
+}
+
+.avatar {
+    &.translateY-axis {
+        img,
+        .avatar-title {
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        img:hover,
+        .avatar-title:hover {
+            -webkit-transform: translateY(-5px) scale(1.02);
+            transform: translateY(-5px) scale(1.02);
+        }
+    }
+    &.translateX-axis {
+        img,
+        .avatar-title {
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        img:hover,
+        .avatar-title:hover {
+            -webkit-transform: translateX(5px) scale(1.02);
+            transform: translateX(5px) scale(1.02);
+        }
+    }
+}
+
+// ? time line
+
+/*
+=====================
+    time line basic
+=====================
+*/
+
+.timeline-line .item-timeline {
+    display: flex;
+    .t-dot {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            border-color: inherit;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: #fa2;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            border-color: inherit;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: #fa2;
+            width: 0;
+            height: auto;
+            top: 25px;
+            bottom: -15px;
+            border-right-width: 0;
+            border-top-width: 0;
+            border-bottom-width: 0;
+            border-radius: 0;
+        }
+        &.t-dot-primary:before {
+            border-color: #fa2;
+        }
+        &.t-dot-success:before {
+            border-color: #fa2;
+        }
+        &.t-dot-warning:before {
+            border-color: #fa2;
+        }
+        &.t-dot-info:before {
+            border-color: #fa2;
+        }
+        &.t-dot-danger:before {
+            border-color: #fa2;
+        }
+        &.t-dot-dark:before {
+            border-color: #fa2;
+        }
+        &.t-dot-primary:after {
+            border-color: #a1a;
+        }
+        &.t-dot-success:after {
+            border-color: #09c101;
+        }
+        &.t-dot-warning:after {
+            border-color: #09c;
+        }
+        &.t-dot-info:after {
+            border-color: red;
+        }
+        &.t-dot-danger:after {
+            border-color: blue;
+        }
+        &.t-dot-dark:after {
+            border-color: #000000;
+        }
+    }
+    &:last-child .t-dot:after {
+        display: none;
+    }
+    .t-meta-time {
+        margin: 0;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 12px;
+        font-weight: 700;
+        color: green;
+        align-self: center;
+    }
+    .t-text {
+        padding: 10px;
+        align-self: center;
+        margin-left: 10px;
+        p {
+            font-size: 13px;
+            margin: 0;
+            color: #09c;
+            font-weight: 600;
+            a {
+                color: #09c;
+                font-weight: 600;
+            }
+        }
+    }
+    .t-time {
+        margin: 0;
+        min-width: 58px;
+        max-width: 100px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #09c;
+        padding: 10px 0;
+    }
+    .t-text .t-meta-time {
+        margin: 0;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #09c;
+        align-self: center;
+    }
+}
+
+
+/*
+=====================
+    time with image
+=====================
+*/

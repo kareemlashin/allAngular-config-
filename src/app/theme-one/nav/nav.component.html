@@ -1,0 +1,26 @@
+<div [dir]="dir">
+    <app-loading-four *ngIf="loading"></app-loading-four>
+    <nb-layout>
+
+        <nb-layout-header fixed>
+            <nb-icon (click)="toggleSidebar()" class="sidebar-toggle" icon="menu-2-outline"></nb-icon>
+            <span class="mx-2"> themes one</span>
+            <button (click)="dirChange()">change dir</button>
+        </nb-layout-header>
+
+        <nb-sidebar class="menu-sidebar" responsive start>
+            <nb-menu [items]="items"></nb-menu>
+
+        </nb-sidebar>
+
+        <nb-layout-column>
+            <ng-content></ng-content>
+
+        </nb-layout-column>
+
+        <nb-layout-footer fixed>
+            This is the footer
+        </nb-layout-footer>
+
+    </nb-layout>
+</div>
