@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+
+[dir="rtl"] {
+    text-align: right !important;
+    direction: rtl !important;
+    .ant-menu-submenu-arrow::before,
+    .ant-menu-submenu-inline>.ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+    .ant-menu-submenu-vertical>.ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+    .ant-menu-submenu-vertical-left>.ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+    .ant-menu-submenu-vertical-right>.ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+    .ant-menu-submenu-inline>.ant-menu-submenu-title .ant-menu-submenu-arrow::after {
+        position: absolute;
+        width: 6px;
+        height: 1.5px;
+        border-radius: 2px;
+        transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        content: '';
+        color: #f00 !important;
+    }
+    .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+    .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+    .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+    .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+    .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+    .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
+        background: #09c;
+        color: #f00;
+        position: absolute;
+        left: -215px !important;
+    }
+    .ant-menu-dark .ant-menu-item:hover,
+    .ant-menu-dark .ant-menu-item-active,
+    .ant-menu-dark .ant-menu-submenu-active,
+    .ant-menu-dark .ant-menu-submenu-open,
+    .ant-menu-dark .ant-menu-submenu-selected,
+    .ant-menu-dark .ant-menu-submenu-title:hover {
+        color: #fff;
+        text-align: right;
+        background-color: #000000;
+    }
+    .ant-menu-item .anticon,
+    .ant-menu-submenu-title .anticon {
+        min-width: 14px;
+        margin-right: -21px;
+        font-size: 14px;
+        transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .anticon svg {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    
+    .ant-menu-dark .ant-menu-item,
+    .ant-menu-dark .ant-menu-item-group-title,
+    .ant-menu-dark .ant-menu-item>a,
+    .ant-menu-dark .ant-menu-item>span>a {
+        color: #ffffffa6;
+        padding-right: 29px;
+    }
+    @media(min-width:100px)and(max-width:769px){
+    .menu-sidebar {
+        position: fixed !important;
+        right: -300px !important;
+    }
+    .open {
+        right: 0px !important;
+    }
+    }
+}
+isCollapsed = true;
+  open:boolean=false;
+
+//!  mobile 
+xl(){
+  
+        this.isCollapsed =false ;
+        this.open =false ;
+}
+  al(){
+    if(!this.isCollapsed){
+        this.isCollapsed = false;
+        this.open = true;
+    }
+  }
+  <nz-layout class="app-layout" dir="rtl">
+    <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" [ngClass]="{'open': open}" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="sidebar-logo">
+            <a href="https://ng.ant.design/" target="_blank">
+                <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+                <h1>Ant Design Of Angular</h1>
+
+            </a>
+        </div>
+                        <button (click)="xl()">text</button>
+
+        <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+            <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+                <ul style="text-align: right;">
+                    <li nz-menu-item nzMatchRouter>
+                        <a routerLink="/welcome">one</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>two</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>three</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="kareem" nzIcon="question">
+                <ul style="text-align: right;">
+                    <li nz-menu-item nzMatchRouter>
+                        <a routerLink="/welcome">one</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>two</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>three</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzIcon="form">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Basic Form</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+            <div class="app-header">
+                <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+        <button (click)="al()">text</button>
+            </div>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+        </nz-content>
+    </nz-layout>
+</nz-layout>
