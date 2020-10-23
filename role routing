@@ -3,3 +3,4 @@
         Role.Admin,
       ]
     },
+            data: { roles: [Role.Doctor]} },
