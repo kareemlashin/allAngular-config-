@@ -1,0 +1,4 @@
+    const x = document.querySelector('.numbers-restranut') as HTMLElement;
+    const y = document.querySelector('.map') as HTMLElement;
+    x.style.display = 'none';
+    y.style.display = 'none';
