@@ -1,0 +1,3 @@
+   let tabElements = document.getElementsByClassName("tab");
+    let tabToDisplay = tabElements.item(n) as HTMLElement;
+    tabToDisplay.style.display="block";
