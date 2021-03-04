@@ -8,6 +8,10 @@ npm install uikit --save
         
 https://www.positronx.io/how-to-integrate-owl-carousel-2-in-angular/
 
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+
+
 npm install @angular/material
 npm install @angular/cdk
 npm install --save @angular/material @angular/animations @angular/cdk
