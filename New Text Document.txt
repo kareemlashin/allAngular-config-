@@ -5,11 +5,11 @@ npm install uikit --save
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/uikit/dist/js/uikit.min.js",
         "../node_modules/uikit/dist/js/uikit-icons.min.js"
+        
+https://www.positronx.io/how-to-integrate-owl-carousel-2-in-angular/
 
-npm uninstall @angular/material
-npm uninstall @angular/cdk
-npm install @angular/material@7.2.0
-npm install @angular/cdk@7.2.0
+npm install @angular/material
+npm install @angular/cdk
 npm install --save @angular/material @angular/animations @angular/cdk
 npm install --save angular/material2-builds angular/cdk-builds
 ng add @angular/material
