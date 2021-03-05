@@ -12,8 +12,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     { provide: LocationStrategy, useClass: HashLocationStrategy }
 
 
-npm install @angular/material
-npm install @angular/cdk
 npm install --save @angular/material @angular/animations @angular/cdk
 ng add @angular/material
 
