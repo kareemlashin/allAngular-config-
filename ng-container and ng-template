@@ -1,1 +1,8 @@
 https://stackoverflow.com/questions/40529537/ng2-difference-between-ng-container-and-ng-template-tags
+<ng-container *ngIf="'true'; else elseTemplate">
+    fffffff
+</ng-container>
+<ng-template #elseTemplate>
+    cccccccc
+</ng-template>
+<ng-container *ngTemplateOutlet="elseTemplate"></ng-container>
