@@ -1,0 +1,18 @@
+
+<div>{{date |date:'short'}}</div>
+<div>{{date |date:'shortDate'}}</div>
+<div>{{date |date:'shortTime'}}</div>
+long
+<div>{{date |date:'long'}}</div>
+<div>{{date |date:'longDate'}}</div>
+<div>{{date |date:'longTime'}}</div>
+full
+<div>{{date |date:'full'}}</div>
+<div>{{date |date:'fullDate'}}</div>
+<div>{{date |date:'fullTime'}}</div>
+medium
+<div>{{date |date:'medium'}}</div>
+<div>{{date |date:'mediumDate'}}</div>
+<div>{{date |date:'mediumTime'}}</div>
+<div>{{date |date:'d/MMMM/yyyy-EEEE-a hh:m:s'}}</div>
+<p>{{time | async |date:'hh:mm:ss a':'+2'}}</p>
