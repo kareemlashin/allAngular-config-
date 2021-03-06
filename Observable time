@@ -1,0 +1,5 @@
+dateVal: Date = new Date();
+  time = new Observable<string>((observer: Subscriber<string>) => {
+    setInterval(() => observer.next(new Date().toString()), 1000);
+  });
+  <p>{{time | async |date:'hh:mm:ss a':'+2'}}</p>
