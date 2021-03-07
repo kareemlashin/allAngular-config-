@@ -1,3 +1,6 @@
+https://www.itsolutionstuff.com/post/angular-11-file-upload-exampleexample.html
+https://bezkoder.com/angular-11-file-upload/
+
 <form [formGroup]="form" (ngSubmit)="add()">
     <input type="text" formControlName="name">
     <img [src]="url" height="200"> <br/>
