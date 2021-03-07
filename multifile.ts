@@ -1,3 +1,7 @@
+https://bezkoder.com/angular-11-multiple-file-upload/
+https://www.itsolutionstuff.com/post/angular-11-multiple-file-upload-tutorialexample.html
+https://morioh.com/p/ad5c092248dc
+https://blog.angular-university.io/angular-file-upload/
 
 <form [formGroup]="myForm" (ngSubmit)="submit()">
 
