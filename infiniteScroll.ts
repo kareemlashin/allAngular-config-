@@ -33,6 +33,23 @@ this._AuthService.pagination(this.page).subscribe(x=>{
 })
 
 }
+
+  onMousewheel($event:Event) {
+
+    var layout = document.getElementById('scroll') as HTMLElement;
+    var pannel2 = document.getElementById('all') as HTMLElement;
+    let scroll = layout.offsetHeight;
+    let allH = layout.scrollTop;
+    let allH3 = pannel2.scrollHeight;
+    if (allH >= allH3-350) {
+      console.log(`scroll ${scroll} all ${allH} 3 ${allH3}`);
+      this.load();
+
+    }
+
+
+
+  }
 @HostListener('mousewheel', ['$event']) onMousewheel($event) {
 
 var pannel = document.getElementById('scroll');
