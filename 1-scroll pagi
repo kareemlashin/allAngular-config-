@@ -17,3 +17,9 @@
       }
     }
     
+.box-scrol {
+    height: 700px;
+    max-height: 7000px;
+    overflow-y: scroll;
+}
+
