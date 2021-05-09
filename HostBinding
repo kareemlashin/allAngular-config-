@@ -1,0 +1,61 @@
+https://edupala.com/what-is-angular-hostbinding-and-angular-hostlistener/
+
+
+
+
+
+will bind the property to the host element, If a binding changes, HostBinding will update the host element
+import {
+  Directive,
+  HostBinding,
+  HostListener } from '@angular/core';
+
+@Directive({
+  selector: '[appRainbow]'
+})
+export class RainbowDirective {
+  possibleColors = [
+    'darksalmon', 'hotpink', 'lightskyblue', 'goldenrod', 'peachpuff',
+    'mediumspringgreen', 'cornflowerblue', 'blanchedalmond', 'lightslategrey'
+  ];
+  @HostBinding('style.color') color: string;
+  @HostBinding('style.border-color') borderColor: string;
+  @HostListener('keydown') newColor() {
+    const colorPick = Math.floor(Math.random() * this.possibleColors.length);
+this.color = this.borderColor = this.possibleColors[colorPick];
+<input type="text" appRainbow>
+
+
+
+
+  <h2>appHighLight Directive</h2>
+
+import { Directive, HostBinding, OnInit, HostListener } from '@angular/core'
+ 
+@Directive({
+  selector: '[appHighLight]',
+})
+export class HighLightDirective implements OnInit {
+ 
+  @HostBinding('style.border') border: string;
+ 
+  ngOnInit() {
+  }
+ 
+  @HostListener('mouseover') 
+  onMouseOver() {
+    this.border = '5px solid green';
+    console.log("Mouse over")
+  }
+ 
+  @HostListener('mouseleave') 
+  onMouseLeave() {
+    this.border = '';
+    console.log("Mouse Leave")
+  }
+ 
+}
+
+
+
+
