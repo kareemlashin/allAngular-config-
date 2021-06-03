@@ -1,0 +1,37 @@
+https://github.com/mdali602/angular-folder-structure
+https://gist.github.com/mathisGarberg/d21831500bceed0d427efdf0132b1fd8
+https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
+https://blogs.halodoc.io/angular-best-practices/
+https://stackoverflow.com/questions/56938106/angular-project-structure-for-enterprise-projects
+|-- app    
+|-- modules    
+|-- home          
+|-- [+] components          
+|-- [+] pages          
+|-- home-routing.module.ts      
+|-- home.module.ts 
+|-- core   
+|-- [+] authentication   
+|-- [+] footer     
+|-- [+] guards    
+|-- [+] http      
+|-- [+] interceptors      
+|-- [+] mocks     
+|-- [+] services 
+|-- [+] header    
+|-- core.module.ts    
+|-- ensureModuleLoadedOnceGuard.ts     
+|-- logger.service.ts 
+|     
+|-- shared       
+|-- [+] components   
+|-- [+] directives   
+|-- [+] pipes      
+|-- [+] models    
+|     
+|-- [+] configs
+|-- assets  
+|-- scss   
+|-- [+] partials      
+|-- _base.scss         
+|-- styles.scss
