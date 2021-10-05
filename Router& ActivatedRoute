@@ -1,0 +1,10 @@
+id:any;
+constructor(private _ActivatedRoute:ActivatedRoute,private _Router:Router) { 
+   this.id = _ActivatedRoute.snapshot.paramMap.get('id');
+
+  }
+go(){
+  this._Router.navigateByUrl('/');
+  this._Router.navigate(['/path/',5]);
+  this._Router.navigate(['/path/',{id:'',name:''}]);
+  }
