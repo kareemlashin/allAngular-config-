@@ -1,0 +1,7 @@
+https://www.daptontechnologies.com/angular-ngxs-crud/
+npm install @ngxs/store --save
+
+npm install @ngxs/logger-plugin@dev --save
+
+yarn add @ngxs/logger-plugin @ngxs/devtools-plugin --dev
+
