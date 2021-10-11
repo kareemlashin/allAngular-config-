@@ -1,3 +1,5 @@
+npm install --save-dev @fortawesome/fontawesome-free jquery bootstrap uikit popper.js
+
 npm install --save-dev @fortawesome/fontawesome-free
 npm i -S jquery
 npm i -S bootstrap
