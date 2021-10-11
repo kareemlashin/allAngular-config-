@@ -1,0 +1,10 @@
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+
+
+export const Interceptor=[
+    { provide: HTTP_INTERCEPTORS, useClass: class, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: class, multi: true },
+]
+
+-AppModule
+  providers: [Interceptor],
